@@ -8,3 +8,4 @@ produto.nome = "Forma de Bolo 30 cm"
 produto.preco = 50.00
 
 Loja.new(produto.nome, produto.preco).comprar
+
