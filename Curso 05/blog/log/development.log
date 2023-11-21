@@ -139,3 +139,110 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms | Allocations: 3132)
 
 
+Started GET "/posts" for 127.0.0.1 at 2023-11-21 14:37:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.5ms | Allocations: 252)
+  Rendered posts/index.html.erb within layouts/application (Duration: 68.8ms | Allocations: 13528)
+  Rendered layout layouts/application.html.erb (Duration: 152.2ms | Allocations: 52719)
+Completed 200 OK in 189ms (Views: 154.7ms | ActiveRecord: 4.9ms | Allocations: 62816)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2023-11-21 14:37:37 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 5.4ms | Allocations: 2203)
+  Rendered posts/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2491)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4593)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 4955)
+
+
+Started POST "/posts" for 127.0.0.1 at 2023-11-21 14:37:41 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "description"=>"dsadsad", "text"=>"dasdasdd"}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.5ms | Allocations: 1548)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1627)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3725)
+Completed 422 Unprocessable Entity in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 5183)
+
+
+Started POST "/posts" for 127.0.0.1 at 2023-11-21 14:38:13 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "description"=>"", "text"=>"dasdasdd"}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.5ms | Allocations: 2690)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2975)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 17583)
+Completed 422 Unprocessable Entity in 32ms (Views: 25.6ms | ActiveRecord: 1.6ms | Allocations: 23276)
+
+
+Started POST "/posts" for 127.0.0.1 at 2023-11-21 14:38:28 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"dsadasd", "description"=>"", "text"=>"dasdasdd"}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 2.4ms | Allocations: 1920)
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2207)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 16614)
+Completed 422 Unprocessable Entity in 43ms (Views: 34.5ms | ActiveRecord: 2.0ms | Allocations: 22359)
+
+
+Started POST "/posts" for 127.0.0.1 at 2023-11-21 14:38:35 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"dsadasd", "description"=>"", "text"=>""}, "commit"=>"Create Post"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.9ms | Allocations: 2221)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2300)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4398)
+Completed 422 Unprocessable Entity in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 5485)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-21 14:42:15 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 272)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1055)
+
+
+Started GET "/index" for 127.0.0.1 at 2023-11-21 14:42:28 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/rails/info/routes" for 127.0.0.1 at 2023-11-21 14:43:52 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (Duration: 5.5ms | Allocations: 6252)
+  Rendered /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.0ms | Allocations: 687)
+  Rendered /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 10.6ms | Allocations: 10581)
+  Rendered layout /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/layouts/application.html.erb (Duration: 11.1ms | Allocations: 10857)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 11402)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2023-11-21 14:44:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 14922)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 15795)
+
+
+Started GET "/" for 127.0.0.1 at 2023-11-21 14:45:25 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 14765)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 15665)
+
+
