@@ -204,3 +204,37 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 3622)
 
 
+Started GET "/" for 127.0.0.1 at 2023-11-22 09:22:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 103.6ms | Allocations: 43671)
+Completed 200 OK in 118ms (Views: 108.0ms | ActiveRecord: 0.0ms | Allocations: 47735)
+
+
+Started GET "/posts" for 127.0.0.1 at 2023-11-22 09:22:44 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.7ms | Allocations: 271)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.6ms | Allocations: 13570)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 15988)
+Completed 200 OK in 45ms (Views: 28.2ms | ActiveRecord: 2.0ms | Allocations: 22323)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2023-11-22 09:22:55 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (Duration: 8.9ms | Allocations: 6656)
+  Rendered /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.1ms | Allocations: 913)
+  Rendered /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 15.0ms | Allocations: 11393)
+  Rendered layout /Users/brenomarcomini/.asdf/installs/ruby/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.2/lib/rails/templates/layouts/application.html.erb (Duration: 15.5ms | Allocations: 11670)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 12568)
+
+
